@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muchprow Hub | Software</title>
+    <style>
+        :root { --bg-color: #0b0d10; --panel-color: #14171c; --accent-color: #ffcc00; --accent-hover: #e6b800; --text-color: #f0f2f5; --text-muted: #8a929e; --border-color: #242933; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 0; display: flex; justify-content: center; }
+        .site-wrapper { display: flex; width: 100%; max-width: 1400px; min-height: 100vh; }
+        .ad-banner { width: 160px; min-width: 160px; background: linear-gradient(180deg, var(--accent-color), #b38f00); padding: 20px 10px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; border-left: 1px solid var(--border-color); border-right: 1px solid var(--border-color); position: relative; box-sizing: border-box; }
+        .ad-text { color: #0b0d10; font-size: 0.85rem; text-align: center; font-weight: 900; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .close-ads-btn { position: absolute; bottom: 10px; background: rgba(0, 0, 0, 0.8); color: var(--accent-color); border: 1px solid var(--accent-color); padding: 5px 10px; font-size: 0.7rem; cursor: pointer; border-radius: 4px; font-weight: bold; transition: all 0.2s; }
+        .close-ads-btn:hover { background: #fff; color: #000; border-color: #fff; }
+        .content-area { flex-grow: 1; padding: 20px; max-width: 1000px; margin: 0 auto; box-sizing: border-box; }
+        .nav-header { background-color: var(--panel-color); border: 1px solid var(--border-color); border-radius: 50px; display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; margin-top: 10px; }
+        .logo-area { font-weight: bold; font-size: 1.3rem; color: #fff; text-decoration: none; letter-spacing: 1px; }
+        .logo-area span { color: var(--accent-color); }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+        .page-title-section { padding: 40px 0 20px 0; border-bottom: 1px solid var(--border-color); margin-bottom: 30px; }
+        .page-title { font-size: 2.2rem; color: #fff; margin: 0 0 10px 0; font-weight: 800; }
+        .page-title span { color: var(--accent-color); }
+        .page-subtitle { color: var(--text-muted); margin: 0; font-size: 1rem; }
+        .software-list { display: flex; flex-direction: column; gap: 25px; }
+        .software-item-card { background-color: var(--panel-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; display: flex; justify-content: space-between; align-items: center; gap: 20px; transition: border-color 0.2s; }
+        .software-item-card:hover { border-color: var(--accent-color); }
+        .software-info { flex-grow: 1; }
+        .software-meta { display: flex; gap: 15px; align-items: center; margin-bottom: 10px; }
+        .software-name { font-size: 1.5rem; color: #fff; margin: 0; font-weight: 700; }
+        .software-tag { background-color: rgba(255, 204, 0, 0.1); color: var(--accent-color); font-size: 0.75rem; padding: 3px 10px; border-radius: 4px; font-weight: bold; border: 1px solid rgba(255, 204, 0, 0.2); }
+        .software-description { color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.5; }
+        .download-action-btn { background-color: var(--accent-color); color: #0b0d10; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; white-space: nowrap; transition: background-color 0.2s, transform 0.1s; box-shadow: 0 4px 14px rgba(255, 204, 0, 0.2); }
+        .download-action-btn:hover { background-color: var(--accent-hover); transform: translateY(-2px); }
+        footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; margin-top: 40px; border-top: 1px solid var(--border-color); }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="ad-banner" id="leftAd"><div class="ad-text">Muchprow<br>Hub<br>Ads</div><button class="close-ads-btn" onclick="hideAds()">Hide Ads</button></div>
+
+        <div class="content-area">
+            <header class="nav-header">
+                <a href="index.html" class="logo-area"><span>⚡ Muchprow Hub</span></a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="software.html" class="active">Software & P2P</a>
+                    <a href="planned.html">Planned</a>
+                    <a href="links.html">Links</a>
+                </div>
+            </header>
+
+            <div class="page-title-section">
+                <h1 class="page-title">Production <span>Software</span></h1>
+                <p class="page-subtitle">Download stable binary releases compiled directly by Muchprow Studio.</p>
+            </div>
+
+            <div class="software-list">
+                <div class="software-item-card">
+                    <div class="software-info">
+                        <div class="software-meta"><h2 class="software-name">BaseTorrent Client</h2><span class="software-tag">v3.0.0 • Stable</span></div>
+                        <p class="software-description">A highly optimized hybrid torrent download utility using the unique <b>.btorrent</b> specification. Features an isolated byte-stream analyzer connected to VirusTotal Cloud Shield, blocking threat vectors prior to disk deployment. Includes a classic terminal console interface.</p>
+                    </div>
+                    <a href="BaseTorrent.zip" download class="download-action-btn">Download (.ZIP)</a>
+                </div>
+            </div>
+
+            <footer><p>&copy; 2026 Muchprow Studio. All rights reserved. Built for global speed and absolute privacy.</p></footer>
+        </div>
+
+        <div class="ad-banner" id="rightAd"><div class="ad-text">Ad Space<br>Available<br>Contact Me</div><button class="close-ads-btn" onclick="hideAds()">Hide Ads</button></div>
+    </div>
+    <script>function hideAds() { document.getElementById('leftAd').style.display = 'none'; document.getElementById('rightAd').style.display = 'none'; }</script>
+</body>
+</html>
